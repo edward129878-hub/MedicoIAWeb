@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Médico IA</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="logo">
+
+            🩺
+
+        </div>
+
+        <h1>Médico IA</h1>
+
+        <p>Asistente Médico con Gemini</p>
+
+    </header>
+
+
+
+    <main id="chat">
+
+        <div class="message ai">
+
+            <div class="bubble">
+
+                👋 Hola.
+
+                <br><br>
+
+                Soy tu asistente médico virtual.
+
+                <br><br>
+
+                Describe tus síntomas o envíame una imagen.
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="preview" id="preview"></div>
+
+        <div class="inputBox">
+
+            <label for="image">
+
+                📷
+
+            </label>
+
+            <input
+                type="file"
+                id="image"
+                accept="image/*"
+                hidden
+            >
+
+            <textarea
+
+                id="message"
+
+                placeholder="Escribe aquí..."
+
+                rows="1"
+
+            ></textarea>
+
+            <button id="send">
+
+                ➜
+
+            </button>
+
+        </div>
+
+        <small>
+
+            Ctrl + Enter para enviar
+
+        </small>
+
+    </footer>
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
